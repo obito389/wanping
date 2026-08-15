@@ -1,0 +1,12 @@
+{
+  "name": "wanping",
+  "private": true,
+  "version": "0.1.0",
+  "description": "数智红迹——宛平城地区红色文化数字化传播调研成果展示网站",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

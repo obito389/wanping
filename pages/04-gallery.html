@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>精彩影像 · 数智红迹</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="nav-brand" href="../index.html">
+        数智红迹
+        <small>宛平城红色文化数字化传播调研</small>
+      </a>
+      <button class="nav-toggle" aria-label="菜单">☰</button>
+      <ul class="nav-links">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="01-project.html">项目介绍</a></li>
+        <li><a href="02-footprint.html">实践足迹</a></li>
+        <li><a href="03-findings.html">调研发现</a></li>
+        <li><a href="04-gallery.html" class="active">精彩影像</a></li>
+        <li><a href="05-team.html">团队成员</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner">
+    <h1>精彩影像</h1>
+    <p>镜头里的宛平七月</p>
+  </section>
+
+  <!--
+    TODO(xx): 本页由熊翔负责。结构已搭好：
+    1) 精选照片放 assets/img/，视频放 assets/video/（注意压缩，每个视频建议 < 20MB）
+    2) 每个 gallery-item 加 data-cat="museum|city|show" 即可被筛选按钮过滤
+    3) figcaption 写一句话说明（时间地点需向实地同学核实）
+    4) 法皓扬精选素材到手后再补充
+    下面给两个示例条目，明天照着复制即可。
+  -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">影像集</h2>
+      <p class="section-subtitle">照片与视频</p>
+
+      <div class="gallery-filter">
+        <button class="active" data-cat="all">全部</button>
+        <button data-cat="museum">抗战馆</button>
+        <button data-cat="city">宛平城</button>
+        <button data-cat="show">情景剧</button>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 示例：图片条目
+        <figure class="gallery-item" data-cat="museum">
+          <img src="../assets/img/xxx.jpg" alt="说明文字" loading="lazy" />
+          <figcaption>中国人民抗日战争纪念馆 · 英烈照片翻转矩阵</figcaption>
+        </figure>
+        -->
+        <!-- 示例：视频条目
+        <figure class="gallery-item" data-cat="show">
+          <video src="../assets/video/xxx.mp4" controls preload="metadata"></video>
+          <figcaption>永定小剧场 · 沉浸式情景剧</figcaption>
+        </figure>
+        -->
+        <div class="placeholder" style="grid-column: 1 / -1;">
+          此处填充精选照片与视频（素材挑选建议见 docs/素材清单.md；法皓扬的精选素材到手后一并放入）
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-title">数智红迹 · 宛平城红色文化数字化传播调研</div>
+    <p>中国人民大学暑期社会实践 &copy; 2026 · 铭记历史 缅怀先烈 珍爱和平 开创未来</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

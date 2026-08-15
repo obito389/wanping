@@ -7,6 +7,23 @@
 - **林靖凯**：网站整体框架、导航栏、统一视觉样式、移动端适配、首页、01 项目介绍、05 团队成员、最终部署
 - **熊翔**：02 实践足迹、03 调研发现、04 精彩影像
 
+## 目录结构
+
+```
+index.html            首页（林靖凯）
+pages/01-project.html 项目介绍（林靖凯）
+pages/02-footprint.html 实践足迹（熊翔）
+pages/03-findings.html  调研发现（熊翔）
+pages/04-gallery.html   精彩影像（熊翔）
+pages/05-team.html      团队成员（林靖凯）
+css/style.css         全站样式（公共，改动前先打招呼）
+js/main.js            全站脚本（导航折叠、画廊筛选）
+docs/素材清单.md       照片视频选片索引与填充建议
+assets/               精选压缩后的图片视频（明天填充）
+```
+
+本地预览：`npm install` 后 `npm run dev`。
+
 ## 协作约定
 
 1. 各自只改自己负责的页面文件，公共样式改动先群里说一声；

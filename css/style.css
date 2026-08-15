@@ -1,0 +1,425 @@
+/* ============================================================
+   数智红迹 · 宛平城红色文化数字化传播调研 —— 全站样式
+   主题色：低饱和红 #9e2b25 / 米白 #faf6ef / 深灰 #2b2b2b
+   ============================================================ */
+
+:root {
+  --red: #9e2b25;
+  --red-dark: #7c1f1a;
+  --red-light: #c05a50;
+  --cream: #faf6ef;
+  --cream-dark: #f1e9dc;
+  --ink: #2b2b2b;
+  --ink-light: #6b6b6b;
+  --gold: #c9a063;
+  --max-width: 1100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.8;
+}
+
+img, video { max-width: 100%; display: block; }
+
+a { color: var(--red); text-decoration: none; }
+a:hover { color: var(--red-dark); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------------- 顶部导航 ---------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 246, 239, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid var(--red);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.nav-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.nav-brand small {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--ink-light);
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 6px;
+}
+
+.nav-links a {
+  display: block;
+  padding: 8px 12px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-links a:hover { background: var(--cream-dark); color: var(--red); }
+
+.nav-links a.active {
+  color: var(--red);
+  font-weight: 700;
+  border-bottom: 2px solid var(--red);
+  border-radius: 0;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--red);
+  cursor: pointer;
+}
+
+/* ---------------- 首页 Hero ---------------- */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(rgba(43, 20, 18, 0.55), rgba(43, 20, 18, 0.65)),
+              var(--red-dark) center / cover no-repeat;
+  /* TODO(明天): 背景图换成 assets/img/hero.jpg（建议用 021052 群雕黄昏剪影） */
+  /* background-image: linear-gradient(...), url("../assets/img/hero.jpg"); */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 10px;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+  opacity: 0.92;
+  margin-bottom: 32px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 36px;
+  border: 1px solid #fff;
+  color: #fff;
+  letter-spacing: 4px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.hero .btn:hover { background: #fff; color: var(--red-dark); }
+
+/* ---------------- 页面通用 ---------------- */
+.page-banner {
+  background: linear-gradient(rgba(124, 31, 26, 0.85), rgba(124, 31, 26, 0.9));
+  color: #fff;
+  text-align: center;
+  padding: 64px 24px 48px;
+}
+
+.page-banner h1 { font-size: 2.2rem; letter-spacing: 8px; margin-bottom: 10px; }
+.page-banner p { opacity: 0.85; letter-spacing: 2px; font-size: 0.95rem; }
+
+.section { padding: 56px 0; }
+.section:nth-of-type(even) { background: var(--cream-dark); }
+
+.section-title {
+  font-size: 1.6rem;
+  color: var(--red);
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--ink-light);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 36px;
+}
+
+.section-subtitle::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--gold);
+  margin: 14px auto 0;
+}
+
+.prose { max-width: 760px; margin: 0 auto; }
+.prose p { margin-bottom: 1em; text-indent: 2em; }
+
+/* 占位提示块（填充内容前显示，填充后删除） */
+.placeholder {
+  border: 2px dashed var(--red-light);
+  border-radius: 8px;
+  padding: 28px 24px;
+  color: var(--red-light);
+  background: rgba(158, 43, 37, 0.04);
+  text-align: center;
+  font-size: 0.95rem;
+  margin: 16px 0;
+}
+
+/* ---------------- 首页卡片 ---------------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--cream-dark);
+  border-top: 4px solid var(--red);
+  border-radius: 8px;
+  padding: 28px 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+
+.card h3 { color: var(--red); letter-spacing: 3px; margin-bottom: 10px; font-size: 1.1rem; }
+.card p { color: var(--ink-light); font-size: 0.92rem; }
+.card .card-link { display: inline-block; margin-top: 14px; font-size: 0.9rem; }
+
+/* ---------------- 02 实践足迹：时间线 ---------------- */
+.timeline {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--red-light);
+}
+
+.timeline-item { position: relative; margin-bottom: 40px; }
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 8px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 3px solid var(--cream);
+  box-shadow: 0 0 0 2px var(--red);
+}
+
+.timeline-item .tl-date {
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.timeline-item h3 { letter-spacing: 2px; margin-bottom: 6px; }
+.timeline-item p { color: var(--ink-light); font-size: 0.95rem; }
+
+/* ---------------- 03 调研发现 ---------------- */
+.finding {
+  max-width: 860px;
+  margin: 0 auto 40px;
+  background: #fff;
+  border-left: 5px solid var(--red);
+  border-radius: 0 8px 8px 0;
+  padding: 28px 32px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.finding h3 { color: var(--red); letter-spacing: 2px; margin-bottom: 10px; }
+.finding p { color: var(--ink); font-size: 0.96rem; }
+
+.data-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.data-strip .num {
+  font-size: 2.2rem;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.data-strip .label { color: var(--ink-light); font-size: 0.9rem; letter-spacing: 1px; }
+
+/* ---------------- 04 精彩影像：画廊 ---------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--cream-dark);
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-item img, .gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 12px 8px;
+  color: #fff;
+  font-size: 0.82rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+}
+
+.gallery-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.gallery-filter button {
+  border: 1px solid var(--red);
+  background: none;
+  color: var(--red);
+  padding: 6px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.gallery-filter button.active, .gallery-filter button:hover {
+  background: var(--red);
+  color: #fff;
+}
+
+/* ---------------- 05 团队成员 ---------------- */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.member {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px 16px;
+  text-align: center;
+  border: 1px solid var(--cream-dark);
+}
+
+.member .avatar {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red-light);
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+.member h3 { letter-spacing: 2px; margin-bottom: 4px; }
+.member .role { color: var(--red); font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 8px; }
+.member p { color: var(--ink-light); font-size: 0.85rem; }
+
+/* ---------------- 页脚 ---------------- */
+.site-footer {
+  background: var(--ink);
+  color: #cfcfcf;
+  text-align: center;
+  padding: 36px 24px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.site-footer .footer-title { color: var(--gold); letter-spacing: 3px; margin-bottom: 8px; }
+
+/* ---------------- 响应式 ---------------- */
+@media (max-width: 860px) {
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    background: var(--cream);
+    border-bottom: 2px solid var(--red);
+    padding: 8px 0;
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 24px; }
+
+  .hero h1 { font-size: 2rem; letter-spacing: 6px; }
+  .page-banner h1 { font-size: 1.6rem; letter-spacing: 5px; }
+}

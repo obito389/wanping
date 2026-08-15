@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+
+# 原始照片视频素材不进入仓库（体积太大），精选压缩后再放入 assets/
+assets/raw/
