@@ -32,12 +32,8 @@
   </section>
 
   <!--
-    TODO(xx): 本页由熊翔负责。结构已搭好：
-    1) 精选照片放 assets/img/，视频放 assets/video/（注意压缩，每个视频建议 < 20MB）
-    2) 每个 gallery-item 加 data-cat="museum|city|show" 即可被筛选按钮过滤
-    3) figcaption 写一句话说明（时间地点需向实地同学核实）
-    4) 法皓扬精选素材到手后再补充
-    下面给两个示例条目，明天照着复制即可。
+    已填充 9 个条目（8 张照片 + 1 段情景剧视频，压缩版在 assets/img 与 assets/video/）。
+    待办：法皓扬精选素材到手后补充；照片说明文字向实地同学核实后可再细化。
   -->
   <section class="section">
     <div class="container">
@@ -52,21 +48,47 @@
       </div>
 
       <div class="gallery-grid">
-        <!-- 示例：图片条目
+        <!-- 抗战馆 -->
         <figure class="gallery-item" data-cat="museum">
-          <img src="../assets/img/xxx.jpg" alt="说明文字" loading="lazy" />
-          <figcaption>中国人民抗日战争纪念馆 · 英烈照片翻转矩阵</figcaption>
+          <img src="../assets/img/museum-led.jpg" alt="抗战馆序厅 LED 主题屏" loading="lazy" />
+          <figcaption>中国人民抗日战争纪念馆 · LED 主题屏「铭记历史 缅怀先烈 珍爱和平 开创未来」</figcaption>
         </figure>
-        -->
-        <!-- 示例：视频条目
+        <figure class="gallery-item" data-cat="museum">
+          <img src="../assets/img/museum-datawall.jpg" alt="抗战伤亡损失立体数字墙" loading="lazy" />
+          <figcaption>中国人民抗日战争纪念馆 · 伤亡损失立体数字墙</figcaption>
+        </figure>
+        <figure class="gallery-item" data-cat="museum">
+          <img src="../assets/img/museum-nanniwan.jpg" alt="南泥湾精神电子屏与展板" loading="lazy" />
+          <figcaption>中国人民抗日战争纪念馆 · 南泥湾精神电子屏</figcaption>
+        </figure>
+        <figure class="gallery-item" data-cat="museum">
+          <img src="../assets/img/museum-langya.jpg" alt="狼牙山五壮士雕塑场景" loading="lazy" />
+          <figcaption>中国人民抗日战争纪念馆 · 狼牙山五壮士雕塑场景</figcaption>
+        </figure>
+
+        <!-- 宛平城 · 卢沟桥 -->
+        <figure class="gallery-item" data-cat="city">
+          <img src="../assets/img/city-gate.jpg" alt="宛平城威严门" loading="lazy" />
+          <figcaption>宛平城 · 威严门</figcaption>
+        </figure>
+        <figure class="gallery-item" data-cat="city">
+          <img src="../assets/img/city-map.jpg" alt="宛平思政月点位地图与研学小程序码" loading="lazy" />
+          <figcaption>宛平城 ·「宛平思政月」点位地图与研学小程序</figcaption>
+        </figure>
+        <figure class="gallery-item" data-cat="city">
+          <img src="../assets/img/lugou-bridge.jpg" alt="卢沟桥桥面石板路与石狮望柱" loading="lazy" />
+          <figcaption>卢沟桥 · 桥面石板路与石狮望柱</figcaption>
+        </figure>
+        <figure class="gallery-item" data-cat="city">
+          <img src="../assets/img/lugou-lion.jpg" alt="卢沟桥石狮特写" loading="lazy" />
+          <figcaption>卢沟桥 · 石狮特写（背景为永定河）</figcaption>
+        </figure>
+
+        <!-- 情景剧 -->
         <figure class="gallery-item" data-cat="show">
-          <video src="../assets/video/xxx.mp4" controls preload="metadata"></video>
-          <figcaption>永定小剧场 · 沉浸式情景剧</figcaption>
+          <video src="../assets/video/theater-show.mp4" controls preload="metadata"></video>
+          <figcaption>永定小剧场 · 沉浸式情景剧（LED 大屏卢沟桥画面背景）</figcaption>
         </figure>
-        -->
-        <div class="placeholder" style="grid-column: 1 / -1;">
-          此处填充精选照片与视频（素材挑选建议见 docs/素材清单.md；法皓扬的精选素材到手后一并放入）
-        </div>
       </div>
     </div>
   </section>
